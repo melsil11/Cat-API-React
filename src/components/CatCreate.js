@@ -4,8 +4,8 @@ import { catCreate } from '../api/cat'
 const CatCreate = ({ user, msgAlert }) => {
 
     const defaultCat = {
-        name: '',
-        type: ''
+        breed: '',
+        furType: ''
     }
 
     const [cat, setCat] = useState(defaultCat)
@@ -39,14 +39,14 @@ const CatCreate = ({ user, msgAlert }) => {
 			<>
 				<input
 					type='text'
-					value={cat.name}
-					name='name'
+					value={cat.breed}
+					name='breed'
 					onChange={handleChange}
 				/>
 				<input
 					type='text'
-					value={cat.type}
-					name='type'
+					value={cat.furType}
+					name='furType'
 					onChange={handleChange}
 				/>
 				<button onClick={handleCreateCat}>Create Cat</button>
