@@ -1,14 +1,17 @@
 import React, { useState } from 'react' 
 import { catCreate } from '../api/cat'
-
+// import { useNavigate} from 'react'
 const CatCreate = ({ user, msgAlert }) => {
 
     const defaultCat = {
         breed: '',
-        furType: ''
+        furType: '',
+        numberOfToes: ''
     }
 
     const [cat, setCat] = useState(defaultCat)
+    // const [created, setCreated] = useState
+    // const navigate = useNavigate()
 
     const handleChange = (event) => {
         // to keep the values as users input info 
@@ -20,6 +23,7 @@ const CatCreate = ({ user, msgAlert }) => {
     const handleCreateCat = () => {
         catCreate(cat, user)
         .then(() => {
+            // setCreated(true)
             msgAlert({
                 heading: 'Success',
                 message: 'Create Cat',
@@ -35,20 +39,31 @@ const CatCreate = ({ user, msgAlert }) => {
         })
     }
 
+    // if (created) navigate ('/pets')
+
     return (
 			<>
 				<input
 					type='text'
 					value={cat.breed}
 					name='breed'
+                    placeholder='Breed of Cat'
 					onChange={handleChange}
-				/>
+				></input>
 				<input
 					type='text'
 					value={cat.furType}
 					name='furType'
+                    placeholder='Type of fur'
 					onChange={handleChange}
-				/>
+				></input>
+                <input
+					type='text'
+					value={cat.numberOfToes}
+					name='numberOfToes'
+                    placeholder='Number of Toes'
+					onChange={handleChange}
+				></input>
 				<button onClick={handleCreateCat}>Create Cat</button>
 			</>
 		)

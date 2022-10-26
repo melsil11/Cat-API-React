@@ -13,6 +13,8 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import CatCreate from './components/CatCreate'
+import CatIndex from './components/CatIndex'
+import CatShow from './components/CatShow'
 
 const App = () => {
 
@@ -70,10 +72,24 @@ const App = () => {
               </RequireAuth>}
           />
 		  <Route
-            path='/cats'
+            path='/create'
             element={
               <RequireAuth user={user}>
                 <CatCreate msgAlert={msgAlert} user={user} />
+              </RequireAuth>}
+          />
+		  <Route
+            path='/cats'
+            element={
+              <RequireAuth user={user}>
+                <CatIndex msgAlert={msgAlert} user={user} />
+              </RequireAuth>}
+          />
+		  <Route
+            path='/cats/:id'
+            element={
+              <RequireAuth user={user}>
+                <CatShow msgAlert={msgAlert} user={user} />
               </RequireAuth>}
           />
 				</Routes>
