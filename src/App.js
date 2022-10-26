@@ -47,7 +47,7 @@ const App = () => {
 			<Fragment>
 				<Header user={user} />
 				<Routes>
-					<Route path='/' element={<Home msgAlert={msgAlert} user={user} />} />
+					<Route path='/home' element={<Home msgAlert={msgAlert} user={user} />} />
 					<Route
 						path='/sign-up'
 						element={<SignUp msgAlert={msgAlert} setUser={setUser} />}
@@ -76,6 +76,13 @@ const App = () => {
             element={
               <RequireAuth user={user}>
                 <CatCreate msgAlert={msgAlert} user={user} />
+              </RequireAuth>}
+          />
+		  <Route
+            path='/'
+            element={
+              <RequireAuth user={user}>
+                <CatIndex msgAlert={msgAlert} user={user} />
               </RequireAuth>}
           />
 		  <Route
