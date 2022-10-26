@@ -6,19 +6,19 @@ const CatUpdate = ({ cat, handleChange, handleUpdateCat }) => {
 			<input 
             type='text' 
             value={cat.breed} 
-            name='name' 
+            name='breed' 
             onChange={handleChange} 
             />
 			<input 
             type='text' 
             value={cat.furType} 
-            name='type' 
+            name='furType' 
             onChange={handleChange} 
             />
             <input 
             type='text' 
             value={cat.numberOfToes} 
-            name='type' 
+            name='numberOfToes' 
             onChange={handleChange} 
             />
 			<button onClick={handleUpdateCat}>Update cat</button>

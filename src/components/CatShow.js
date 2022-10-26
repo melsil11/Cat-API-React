@@ -87,8 +87,9 @@ const CatShow = ({ user, msgAlert }) => {
 
     return (
 			<>
-				<h3>Name: {cat.name}</h3>
-				<p>Type: {cat.type}</p>
+				<h3>Name: {cat.breed}</h3>
+				<p>Fur Type: {cat.furType}</p>
+                <p>Number of Toes {cat.numberOfToes} </p>
                 
 				<button onClick={toggleShowUpdate}>Toggle Update</button>
 				{isUpdateShown && (
