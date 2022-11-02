@@ -1,14 +1,12 @@
-import React from 'react'
-// import {Link} from 'react-router-dom'
+import CatIndex from "./CatIndex"
 const Home = (props) => {
-	// const { msgAlert, user } = props
-	console.log('props in home', props)
+	const {msgAlert} = props
 
 	return (
 		<>
-			<h2>Home Page</h2>
-			<div className='container'>
-			{/* <Link to={'/'}></Link> */}
+			<div className = 'container-md'>
+			<h2>All the pets</h2>
+			<CatIndex msgAlert={msgAlert}/>
 			</div>
 		</>
 	)

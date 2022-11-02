@@ -17,8 +17,8 @@ const CatUpdate = ({ cat, handleChange, handleUpdateCat }) => {
             />
             <input 
             type='text' 
-            value={cat.numberOfToes} 
-            name='numberOfToes' 
+            value={cat.averageLifeSpan} 
+            name='averageLifeSpan' 
             onChange={handleChange} 
             />
 			<button onClick={handleUpdateCat}>Update cat</button>

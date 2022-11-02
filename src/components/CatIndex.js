@@ -21,8 +21,8 @@ const CatIndex = ({ user, msgAlert }) => {
 
     const allCatsJSX = allCats.map(cat => {
         return (
-            <Link to={cat._id} key={cat._id}>
-            <li >Name: {cat.breed} type: {cat.furType} Number of Toes: {cat.numberOfToes}</li>            
+            <Link to={`/cats/${cat._id}`} key={cat._id}>
+            <li >Name: {cat.breed} type: {cat.furType} Average Life Span: {cat.averageLifeSpan}</li>            
             </Link>
         )
     })

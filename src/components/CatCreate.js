@@ -6,7 +6,7 @@ const CatCreate = ({ user, msgAlert }) => {
     const defaultCat = {
         breed: '',
         furType: '',
-        numberOfToes: ''
+        averageLifeSpan: ''
     }
 
     const [cat, setCat] = useState(defaultCat)
@@ -59,9 +59,9 @@ const CatCreate = ({ user, msgAlert }) => {
 				></input>
                 <input
 					type='text'
-					value={cat.numberOfToes}
-					name='numberOfToes'
-                    placeholder='Number of Toes'
+					value={cat.averageLifeSpan}
+					name='averageLifeSpan'
+                    placeholder='Average Life Span'
 					onChange={handleChange}
 				></input>
 				<button onClick={handleCreateCat}>Create Cat</button>
