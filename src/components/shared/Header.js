@@ -23,17 +23,18 @@ const authenticatedOptions = (
 				Create a Cat
 			</Link>
 		</Nav.Item>
-		<Nav.Item>
-			<Link to='cats' style={linkStyle}>
-				Index of Cats
-			</Link>
-		</Nav.Item>
+		
 	</>
 )
 
 const unauthenticatedOptions = (
 	<>
         <Nav.Item>
+			<Link to='cats' style={linkStyle}>
+				Index of Cats
+			</Link>
+		</Nav.Item>
+		<Nav.Item>
 		    <Link to='sign-up' style={linkStyle}>Sign Up</Link>
         </Nav.Item>
         <Nav.Item>
