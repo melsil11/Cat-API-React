@@ -22,6 +22,7 @@ const CatCreate = ({ user, msgAlert }) => {
 
     const handleCreateCat = () => {
         catCreate(cat, user)
+        .then(res => { navigate(`/cats/${res.data.cat.id}`)})
         .then(() => {
             // setCreated(true)
             msgAlert({
