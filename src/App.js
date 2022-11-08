@@ -80,10 +80,9 @@ const App = () => {
           />
 		  <Route
             path='/'
-            element={
-              <RequireAuth user={user}>
+            element={              
                 <CatIndex msgAlert={msgAlert} user={user} />
-              </RequireAuth>}
+              }
           />
 		  <Route
             path='/cats'
