@@ -39,7 +39,7 @@ const CatCreate = ({ user, msgAlert }) => {
         })
     }
 
-    // if (created) navigate ('/pets')
+    if (created) navigate ('/pets')
 
     return (
 			<>

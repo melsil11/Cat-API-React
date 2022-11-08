@@ -18,9 +18,9 @@ export const catIndex = ( user) => {
 	return axios({
 		method: 'GET',
 		url: apiUrl + '/cats',
-		headers: {
-			Authorization: `Token token=${user.token}`,
-		},
+		// headers: {
+		// 	Authorization: `Token token=${user.token}`,
+		// },
 	})
 }
 
